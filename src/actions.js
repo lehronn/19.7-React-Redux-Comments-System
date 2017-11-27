@@ -1,7 +1,7 @@
 import uuid from 'uuid';
 
 //actions objects
-export const ADD_COMMENT ='ADD_COMMENT';
+export const ADD_COMMENT = 'ADD_COMMENT';
 export const EDIT_COMMENT = 'EDIT_COMMENT';
 export const DELETE_COMMENT = 'DELETE_COMMENT';
 export const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
@@ -14,7 +14,7 @@ export function addComment(text) {
     id: uuid.v4(),
     text
   }
-};
+}
 
 export function editComment(id, text) {
   return {
@@ -22,27 +22,25 @@ export function editComment(id, text) {
     id,
     text
   }
-};
+}
 
 export function deleteComment(id) {
   return {
     type: DELETE_COMMENT,
     id
   }
-};
+}
 
-function thumbUpComment(id) {
+export function thumbUpComment(id) {
   return {
     type: THUMB_UP_COMMENT,
     id
   }
-};
+}
 
-function thumbDownComment(id) {
+export function thumbDownComment(id) {
   return {
     type: THUMB_DOWN_COMMENT,
     id
   }
-};
-
-export default addComment;
+}
