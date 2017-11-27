@@ -12,7 +12,7 @@ export function addComment(text) {
   return {
     type: ADD_COMMENT,
     id: uuid.v4(),
-    text: text
+    text
   }
 };
 
@@ -20,7 +20,7 @@ export function editComment(id, text) {
   return {
     type: EDIT_COMMENT,
     id,
-    text: text
+    text
   }
 };
 
