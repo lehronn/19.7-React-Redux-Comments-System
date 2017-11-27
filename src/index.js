@@ -7,8 +7,12 @@ import registerServiceWorker from './registerServiceWorker';
 import { createStore } from 'redux'; //magazyn aplikacji, czyli store.
 import reducer from './reducer.js';
 import { addComment } from './actions.js';
+import DevTools from './DevTools.js';
 
-const store = createStore(reducer); //magazyn utworzony.
+const store = createStore(
+  reducer,
+  DevTools.instrument()
+); //magazyn utworzony i dodane Redux DevTools
 
 ReactDOM.render(
   <Provider store={store}>
